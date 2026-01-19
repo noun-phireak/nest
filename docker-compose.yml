@@ -16,6 +16,7 @@ services:
       - DB_DATABASE=pos_db
       # JWT Secret - In production use a secure variable
       - JWT_SECRET=supersecretkey
+    command: sh -c "npm run migration:run && npm run start:dev"
 
   # web:
   #   build: ./web
