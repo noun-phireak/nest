@@ -17,15 +17,15 @@ services:
       # JWT Secret - In production use a secure variable
       - JWT_SECRET=supersecretkey
 
-  web:
-    build: ./web
-    ports:
-      - "5173:5173"
-    volumes:
-      - ./web:/app
-      - /app/node_modules
-    environment:
-      - VITE_API_URL=http://localhost:3000
+  # web:
+  #   build: ./web
+  #   ports:
+  #     - "5173:5173"
+  #   volumes:
+  #     - ./web:/app
+  #     - /app/node_modules
+  #   environment:
+  #     - VITE_API_URL=http://localhost:3000
 
   db:
     image: postgres:15-alpine
